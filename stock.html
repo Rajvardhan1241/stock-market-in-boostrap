@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Section</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .hero-section {
+      position: relative;
+      background: url('stock.jpg') center/cover no-repeat;
+      height: 80vh;
+    }
+
+    .navbar {
+      background-color: white;
+    }
+
+    .features-box {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .z1 {
+      background-color: #e9d9a6;
+      padding: 30px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      position: relative;
+      transform: translateY(90px);
+    }
+
+    .feature-card i {
+      font-size: 30px;
+      background: white;
+      border-radius: 50%;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .fa-solid {
+      font-size: 30px;
+    }
+
+    .tread {
+      height: 110px;
+      width: 290px;
+    }
+
+    .feature-box {
+      padding: 60px 40px;
+      background-color: #fff;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .feature-item i {
+      font-size: 24px;
+      color: black;
+      flex-shrink: 0;
+    }
+
+    .feature-item p {
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .read-more-btn {
+      background-color: black;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      justify-content: center;
+    }
+
+    .read-more-btn:hover {
+      background-color: #333;
+    }
+
+    .image-side img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      padding-right: 10px;
+    }
+
+    .f1 {
+      padding-top: 300px;
+    }
+
+    .section {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+      font-family: Arial,
+        sans-serif;
+    }
+
+    .value-section {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px 30px;
+    }
+
+    .value-item {
+      padding: 30px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .value-item:last-child {
+      border-bottom: none;
+    }
+
+    .value-title {
+      font-weight: bold;
+    }
+
+    .read-more-btn {
+      margin-top: 30px;
+    }
+
+    .btn-black {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-black:hover {
+      background-color: whitesmoke;
+    }
+
+    .c1 {
+      text-align: center;
+    }
+
+    .clients-section {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .clients-section p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #ddd;
+    }
+
+    .client-logo {
+      max-height: 100px;
+      margin: 20px auto;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .client-logo:hover {
+      opacity: 1;
+      transform: scale(1.250);
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+    }
+
+    .testimonial-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 1px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .testimonial-card h6 {
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .testimonial-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      padding-top: 60px;
+    }
+
+    .promo-section {
+      padding: 60px 0;
+    }
+
+    .promo-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .social-icons i:hover {
+      color: #007bff;
+    }
+
+    .btn-custom {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 0;
+    }
+
+    .credit-text {
+      font-size: 12px;
+      color: #777;
+    }
+
+
+    .footer-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 60px 0 30px 0;
+    }
+
+    .footer-divider {
+      border-top: 1px solid #666;
+      margin: 40px auto;
+      width: 60%;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-started {
+      background-color: #c9a96e;
+      border: none;
+      color: #000;
+      padding: 10px 30px;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .div {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      background-image: url('tread.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .we {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="arraow.png" alt="Logo" class="tread" style="height: 90px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Company</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contac.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <!-- Feature Cards -->
+    <div class="features-box container">
+      <div class="feature-card z1">
+        <i class="fa-solid fa-coins"></i>
+        <h5 class="fw-bold mt-2">UNIQUE APPROACH</h5>
+        <p><em>Sample text. Click to select the text box. Click again or double click to start editing the text.</em>
+        </p>
+      </div>
+      <div class="feature-card z1">
+        <i class="fa-solid fa-gear"></i>
+        <h5 class="fw-bold mt-2">Service mix</h5>
+        <p><em>Sample text. Click to select the text box. Click again or double click to start editing the text.</em>
+        </p>
+      </div>
+      <div class="feature-card z1">
+        <i class="fa-solid fa-landmark-flag"></i>
+        <h5 class="fw-bold mt-2">Our Mission</h5>
+        <p><em>Sample text. Click to select the text box. Click again or double click to start editing the text.</em>
+        </p>
+      </div>
+      <div class="feature-card z1">
+        <i class="fa-solid fa-repeat"></i>
+        <h5 class="fw-bold mt-2">Strategic thinking</h5>
+        <p><em>Sample text. Click to select the text box. Click again or double click to start editing the text.</em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid f1" style="background-color: #000;">
+    <div class="row min-vh-100">
+      <!-- Left Column -->
+      <div class="col-lg-6 d-flex align-items-center">
+        <div class="feature-box w-100">
+          <h2 class="mb-5 fw-bold">Why you'll love us</h2>
+
+          <div class="feature-item">
+            <i class="bi bi-check-circle"></i>
+            <p>Strategic thinking looks beyond what's in front of you to see the bigger picture.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="bi bi-check-circle"></i>
+            <p>You'll have access to some of the brightest minds from all corners of the web.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="bi bi-check-circle"></i>
+            <p>Getting to know your brand inside and out means we can innovate on your behalf.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="bi bi-check-circle"></i>
+            <p>When things take a turn, our partnership means we work with you to find creative solutions.</p>
+          </div>
+          <button class="read-more-btn mt-3">Read More</button>
+        </div>
+      </div>
+
+      <!-- Right Column (Image) -->
+      <div class="col-lg-6 image-side p-0">
+        <img src="work.jpg" alt="Team Working Image">
+      </div>
+    </div>
+  </div> <br>
+
+  <div class="section">
+    <h1 style="text-align: center;">We believe in collaboration and innovation.</h1>
+    <p style="text-align: center;">These core values define who we are and the work we do.</p>
+    <div class="value-section">
+
+      <div class="value-item row">
+        <div class="col-md-4 value-title">
+          We’re genuine <br> and compassionate.
+        </div>
+        <div class="col-md-8">
+          Being in the people business can mean difficult decisions and tough conversations. We believe in going into
+          every meeting with a desire and ability to be genuine and compassionate. We are all people, and people make
+          mistakes. We’re here to help you fix those, without risk or judgment, and move forward.
+        </div>
+      </div>
+
+      <div class="value-item row">
+        <div class="col-md-4 value-title">
+          Honesty, integrity, <br> and accountability.
+        </div>
+        <div class="col-md-8">
+          Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id
+          leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit
+          sed ullamcorper. Etiam sit amet nisl purus in mollis.
+        </div>
+      </div>
+
+      <div class="value-item row">
+        <div class="col-md-4 value-title">
+          Passion for our <br> clients.
+        </div>
+        <div class="col-md-8">
+          Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id
+          leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit
+          sed ullamcorper. Etiam sit amet nisl purus in mollis.
+        </div>
+      </div>
+
+      <div class="value-item row">
+        <div class="col-md-4 value-title">
+          Drive for results, <br> with unparalleled service.
+        </div>
+        <div class="col-md-8">
+          Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id
+          leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit
+          sed ullamcorper. Etiam sit amet nisl purus in mollis.
+        </div>
+
+        <div class="text-center read-more-btn c">
+          <button class="btn btn-black">Read More</button>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="clients-section">
+      <div class="container">
+        <h2 class="fw-bold mb-3 we">Clients we believe in</h2>
+        <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex. Suspendisse
+          rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies sapien.
+          Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio.</p>
+
+        <div class="row text-center justify-content-center">
+          <!-- Replace src with your logos -->
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v1.png" alt="Crolla" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v2.png" alt="Binance" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v3.png" alt="EVGA" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v4.png" alt="Tesla" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="images.png" alt="Sony" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v5.png" alt="Crocs" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v6.png" alt="ASOS" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v7.png" alt="Unimed" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v8.png" alt="Holley" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v9.png" alt="Medium" class="img-fluid client-logo">
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <img src="v10.png" alt="Android" class="img-fluid client-logo">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid b1" style="background-color: burlywood;">
+    <h2 class="section-title" style="font-size: 50px;">Testimonials</h2>
+    <br><br><br>
+    <div class="row">
+      <!-- Testimonial 1 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp1.jpg" alt="Stella Larson">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Stella Larson</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp2.jpg" alt="Nick Jhonson">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Nick Jhonson</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp3.jpg" alt="Olga Ivanova">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Olga Ivanova</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp4.jpg" alt="Paul Hudson">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Paul Hudson</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp5.jpg" alt="Cash Hudson">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Cash Hudson</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <img src="wp6.jpg" alt="Mike Perry">
+          <div>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <h6>Mike Perry</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Section 1 -->
+  <section class="promo-section container">
+    <div class="row align-item-left">
+      <div class="col-md-5 text-center">
+        <img src="horn.png" alt="Megaphone" class="promo-img">
+      </div>
+      <div class="col-md-7">
+        <h3><strong>Let your voice be heard.</strong></h3>
+        <p>We help brands amplify their message and reach new audiences through creative marketing strategies and
+          cutting-edge technologies. Discover how our team can elevate your vision and impact.</p>
+        <button class="btn btn-custom mt-3">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="social-icons mb-2">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="credit-text">© 2025 Business Company. All rights reserved.</p>
+  </footer>
+
+
+
+  <div class="div">
+    <div class="footer-section text-white">
+      <div class="text-center text-white py-5">
+        <h2>Want to launch your brand into the future? Strap in and let's go!</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+        <button class="btn btn-started mt-3">Get Started</button>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4 mb-4">
+            <h6>LOCATION:</h6>
+            <p>45 Pirrama Rd,<br>Pyrmont NSW 2002</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h6>CONTACTS:</h6>
+            <p>info@bakery.com<br>(123) 123-1234</p>
+          </div>
+          <div class="col-md-4 mb-4 footer-links">
+            <h6>FOLLOW US:</h6>
+            <a href="#">Facebook</a><br>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Sample text. Click to select the Text Element.<br>
+          This site was created with . See the <a href="#" class="text-decoration-underline">license</a>.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+</body>
+
+</html>

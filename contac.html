@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        .hero-section {
+            background: url('contactimg.jpg') no-repeat center center/cover;
+            height: 700px;
+            position: relative;
+            color: white;
+            padding-top: 250px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .cta-section {
+            background-color: #f9d640;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .btn-quote {
+            background-color: black;
+            color: blueviolet;
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 10px 25px;
+        }
+
+        .display-4 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            font-size: 130px;
+        }
+
+        .info-box {
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .info-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #f5d049;
+        }
+
+        .info-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .info-details {
+            color: #888;
+        }
+
+        .frame {
+            padding-left: 330px;
+
+        }
+
+        .contact-section {
+            padding: 60px 0;
+        }
+
+        .form-control,
+        .form-control:focus {
+            background-color: #f1f1f1;
+            border: none;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background-color: #f6d54c;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-left: 10px solid #f6d54c;
+            font-style: italic;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-started {
+            background-color: #c9a96e;
+            border: none;
+            color: #000;
+            padding: 10px 30px;
+        }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .div {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            background-image: url('tread.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .footer-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #666;
+            margin: 40px auto;
+            width: 60%;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar {
+            background-color: #f9fafb;
+        }
+
+        .nav-link {
+            color: #6c757d !important;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+
+        .navbar-brand img {
+            max-height: 80px;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg justify-content-between sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="arraow.png" alt="Logo">
+        </a>
+
+        <div class="d-flex">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="stock.html">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-4">Contact Us</h1>
+            <p class="lead">Sample text. Click to select the Text Element.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-8 col-md-12 text-lg-start text-center">
+                    <h2>Safety and Service, Always our Priority</h2>
+                </div>
+                <div class="col-lg-4 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
+                    <a href="#" class="btn btn-quote">GET A FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- Box 1 -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <div class="info-number">01</div>
+                    <div class="info-title">CALL US</div>
+                    <div class="info-details">
+                        <div>1 (234) 567-891</div>
+                        <div>1 (234) 987-654</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <div class="info-number">02</div>
+                    <div class="info-title">LOCATION</div>
+                    <div class="info-details">
+                        <div>121 Rock Street, 21 Avenue,</div>
+                        <div>New York, NY 92103-9000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="col-md-4">
+                <div class="info-box">
+                    <div class="info-number">03</div>
+                    <div class="info-title">OUR TOP SERVICES</div>
+                    <div class="info-details">
+                        <div>Self-Studying</div>
+                        <div>Online Courses</div>
+                        <div>Challenge Yourself</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="frame">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387196.0880125289!2d-74.30983586668245!3d40.69667074204266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1749019296610!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><br><br>
+    <div class="container contact-section">
+        <div class="row">
+            <!-- Left Side Form -->
+            <div class="col-md-6">
+                <h6 class="text-uppercase text-muted">Our Contact</h6>
+                <h2 class="section-title mb-4">Feel Free To Ask Me Anything</h2>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter a valid email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5"
+                            placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit w-100">Submit</button>
+                </form>
+            </div>
+
+            <!-- Right Side Content -->
+            <div class="col-md-6 mt-5 mt-md-0">
+                <div class="text-center mb-4">
+                    <img src="worker.jpg" alt="Worker" class="rounded-circle" width="160" />
+                </div>
+                <h5 class="mb-3">Join Our Movement</h5>
+                <p>Every pleasure is to welcome pain avoided owing to the duty the obligations of business. It will
+                    frequently occur that pleasures have.</p>
+                <p>How is all this mistaken idea of denouncing pleasure and praising pain born & we will give you a
+                    complete account of the system and expound on the actual teaching of the great explorer.</p>
+
+                <div class="highlight-box mt-4">
+                    Every pleasure is to welcome pain avoided owing to the duty the obligations of business. It will
+                    frequently...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div">
+        <div class="footer-section text-white">
+            <div class="text-center text-white py-5">
+                <h2>Want to launch your brand into the future? Strap in and let's go!</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                <button class="btn btn-started mt-3">Get Started</button>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="container">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-4 mb-4">
+                        <h6>LOCATION:</h6>
+                        <p>45 Pirrama Rd,<br>Pyrmont NSW 2002</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h6>CONTACTS:</h6>
+                        <p>info@bakery.com<br>(123) 123-1234</p>
+                    </div>
+                    <div class="col-md-4 mb-4 footer-links">
+                        <h6>FOLLOW US:</h6>
+                        <a href="#">Facebook</a><br>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Sample text. Click to select the Text Element.<br>
+                    This site was created with . See the <a href="#" class="text-decoration-underline">license</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
